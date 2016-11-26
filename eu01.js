@@ -7,5 +7,4 @@ function multiplesFinder(para){
   }
   console.log(numHolder);
 }
-
 multiplesFinder(1000);
