@@ -38,7 +38,7 @@ multiplesFinder(1000);*/
 fibonacciSequence(10000);*/
 //Answer: 4613732
 
-function largestPrimeFactor(para){
+/*function largestPrimeFactor(para){
   var factors = [];
   for(var i = 2; i <= para; i++){
     while (isDivisibleBy(para,i)){
@@ -49,5 +49,21 @@ function largestPrimeFactor(para){
   return factors;
 }
 // console.log(largestPrimeFactor(13195));
-console.log(largestPrimeFactor(600851475143));
+console.log(largestPrimeFactor(600851475143));*/
 //Answer: 6857
+
+function largestPalindrome(para){
+  var sumSto = 12345;
+  var array = [];
+
+  sumSto = sumSto.toString();
+  sumSto = sumSto.split("").reverse().join("");
+  sumSto = Number(sumSto);
+  // for(var firstNum = 1; firstNum <= 999; firstNum++){
+  //   for(var secondNum = 1; secondNum <= 999; secondNum++){
+  //     sumSto = firstNum * secondNum;
+  //   }
+  // }
+  console.log(sumSto);
+}
+largestPalindrome();
