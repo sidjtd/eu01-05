@@ -18,7 +18,7 @@ function fibonacciSequence(para){
 
   for ( var i = 0; i < para; i++){
     // console.log(fibA);
-    fibSto = fibB;-
+    fibSto = fibB;
     fibB = fibB + fibA;
     fibA = fibSto;
     // console.log(fibB);
