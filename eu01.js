@@ -23,8 +23,7 @@ function fibonacciSequence(para){
     fibA = fibSto;
     // console.log(fibB);
     console.log(fibA+" + "+fibB +" = " + (fibA+fibB));
-
-    }
+  }
 
 }
 
