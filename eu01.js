@@ -1,3 +1,4 @@
+debugger;
 /*function multiplesFinder(para){
   var numHolder =0;
   for ( var i = 0; i < para; i++){
@@ -14,17 +15,16 @@ function fibonacciSequence(para){
   var fibA = 1;
   var fibB = 2;
   var fibSto = 0;
-  var fibSum = 0;
-
+  var fibSum = 2;
   for ( var i = 0; i < para; i++){
-    // console.log(fibA);
     fibSto = fibB;
     fibB = fibB + fibA;
     fibA = fibSto;
-    // console.log(fibB);
-    console.log(fibA+" + "+fibB +" = " + (fibA+fibB));
+    fibSto = fibA + fibB;
+    if (fibSum <= 4000000 && fibSto%2===0){
+      fibSum += fibSto;
+      console.log("Sum: " + fibSum);
+    }
   }
-
 }
-
-fibonacciSequence(10);
+fibonacciSequence(10000);
