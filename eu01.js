@@ -59,27 +59,24 @@ console.log(largestPrimeFactor(600851475143));*/
 //Answer: 6857
 
 function largestPalindrome(para){
-  var numOne = 999;
-  var numTwo = 999;
+  var numA = 999;
+  var numB = 999;
   var prod = 0;
   var prodReversed = 0;
 
-  for(numOne = 999; numOne > 900; numOne--){
-    for(numTwo = 999; numTwo > 900; numTwo--){
-      prod = numOne * numTwo;
+  for(numA = 999; numA > 900; numA--){
+    for(numB = 999; numB > 900; numB--){
+      prod = numA * numB;
       prodLength = prod.toString().length;
       prodReversed = prod.toString();
       prodReversed = prodReversed.split("").reverse().join("");
       prodReversed = Number(prodReversed);
-
         if(prod===prodReversed){
-          numOne = 900;
+          numA = 900;
           console.log(prod);
-        }else{
         }
     }
   }
 }
-
 largestPalindrome();
 //Answer: 906609
