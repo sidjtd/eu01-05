@@ -7,6 +7,12 @@ function isDivisibleBy(numA,numB){
     return false;
   }
 }
+
+function removeDupes(para) {
+  return para.sort().filter(function(item, pos, ary){
+    return !pos || item  != ary[pos - 1];
+  });
+}
 /*function multiplesFinder(para){
   var numHolder =0;
   for ( var i = 0; i < para; i++){
@@ -53,17 +59,34 @@ console.log(largestPrimeFactor(600851475143));*/
 //Answer: 6857
 
 function largestPalindrome(para){
-  var sumSto = 12345;
+  // var prod = 5555;
   var array = [];
+  var numOne = 999;
+  var numTwo = 999;
+  var prod = 0;
+  var prodLength = '';
+  var prodReversed = 0;
 
-  sumSto = sumSto.toString();
-  sumSto = sumSto.split("").reverse().join("");
-  sumSto = Number(sumSto);
-  // for(var firstNum = 1; firstNum <= 999; firstNum++){
-  //   for(var secondNum = 1; secondNum <= 999; secondNum++){
-  //     sumSto = firstNum * secondNum;
-  //   }
-  // }
-  console.log(sumSto);
+  for(numOne = 999; numOne > 800; numOne--){
+    for(numTwo = 999; numTwo > 800; numTwo--){
+      prod = numOne * numTwo;
+      prodLength = prod.toString().length;
+      prodReversed = prod.toString();
+      prodReversed = prodReversed.split("").reverse().join("");
+      prodReversed = Number(prodReversed);
+
+        if(prod===prodReversed && prodLength >= 0){
+          array.push(prod);
+        }else{
+        }
+      // console.log(numOne,numTwo);
+    }
+  }
+  array = removeDupes(array);
+  prodLength = array.length;
+  array = array.splice(prodLength-1);
+  console.log(array);
 }
+
 largestPalindrome();
+//Answer: 906609
