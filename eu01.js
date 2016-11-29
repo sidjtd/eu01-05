@@ -13,6 +13,10 @@ function removeDupes(para) {
     return !pos || item  != ary[pos - 1];
   });
 }
+
+function getlength(number) {
+    return number.toString().length;
+}
 /*function multiplesFinder(para){
   var numHolder =0;
   for ( var i = 0; i < para; i++){
@@ -58,7 +62,7 @@ fibonacciSequence(10000);*/
 console.log(largestPrimeFactor(600851475143));*/
 //Answer: 6857
 
-function largestPalindrome(para){
+/*function largestPalindrome(para){
   var numA = 999;
   var numB = 999;
   var prod = 0;
@@ -78,5 +82,25 @@ function largestPalindrome(para){
     }
   }
 }
-largestPalindrome();
+largestPalindrome();*/
 //Answer: 906609
+
+function smallestRemainder(parameter){
+  var divThisNum = 0;
+  var success = false;
+
+  while (success === false || divThisNum < 100000000) {
+    success = true;
+    divThisNum += 1;
+
+    for (var diver = 2; diver <= parameter; diver++) {
+      if (divThisNum % diver !== 0) {
+        success = false;
+        break;
+      }
+    }
+  }
+  console.log(divThisNum);
+}
+
+smallestRemainder(20);
