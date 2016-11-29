@@ -88,11 +88,9 @@ largestPalindrome();*/
 function smallestRemainder(parameter){
   var divThisNum = 0;
   var success = false;
-
   while (success === false || divThisNum < 100000000) {
     success = true;
     divThisNum += 1;
-
     for (var diver = 2; diver <= parameter; diver++) {
       if (divThisNum % diver !== 0) {
         success = false;
@@ -102,5 +100,5 @@ function smallestRemainder(parameter){
   }
   console.log(divThisNum);
 }
-
 smallestRemainder(20);
+//Answer: 232792560
