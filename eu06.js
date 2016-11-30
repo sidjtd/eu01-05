@@ -17,3 +17,15 @@ function removeDupes(para) {
 function getlength(number) {
     return number.toString().length;
 }
+
+//-----------------
+
+function sumOfSquares(para){
+  var sumSto = 0;
+  for (var i = 0; i < para; i++){
+    sumSto += i*i;
+  }
+  console.log(sumSto);
+}
+
+sumOfSquares(10);
