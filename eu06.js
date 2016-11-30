@@ -21,11 +21,15 @@ function getlength(number) {
 //-----------------
 
 function sumOfSquares(para){
-  var sumSto = 0;
-  for (var i = 0; i < para; i++){
-    sumSto += i*i;
+  var sumOfSq = 0;
+  var sqOfSum = 0;
+  for (var i = 1; i < para+1; i++){
+    sumOfSq += i*i;
+    sqOfSum += i;
   }
-  console.log(sumSto);
+  sqOfSum = sqOfSum*sqOfSum;
+  console.log(sqOfSum - sumOfSq);
 }
+sumOfSquares(100);
+//Answer :  25164150
 
-sumOfSquares(10);
